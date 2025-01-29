@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "VCRNeue";
+  src: url("/fonts/vcr-osd-neue.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VCRMono";
+  src: url("/fonts/vcr-osd-mono.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* add the code bellow */
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+html,
+body {
+  @apply no-scrollbar;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+.darksoul-circular-nav {
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 50%;
+  animation-name: nav-rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+.darksoul-circle-1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  margin: auto;
+}
+.darksoul-circle-2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 20px rgb(208, 207, 207);
+  margin: auto;
+  display: flex;
+}
+.darksoul-circle-3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  margin: auto;
+}
+.darksoul-circle-4 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 20px rgb(208, 207, 207);
+  margin: auto;
+  display: flex;
+}
+.darksoul-circle-5 {
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 20px rgb(208, 207, 207);
+  margin: auto;
+  display: flex;
+}
+svg {
+  margin: auto;
+}
+
+.darksoul-circle-6 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 20px rgb(208, 207, 207);
+  margin: auto;
+  display: flex;
+}
+.darksoul-circle-7 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  margin: auto;
+}
+.darksoul-circle-8 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 20px rgb(208, 207, 207);
+  margin: auto;
+  display: flex;
+}
+.darksoul-circle-9 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.darksoul-circular-nav:hover {
+  animation-play-state: paused;
+}
+.darksoul-circle-2:hover {
+  transform: scale(1.09);
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 1px 1px 40px rgb(208, 207, 207);
+  animation-play-state: paused;
+}
+.darksoul-circle-4:hover {
+  transform: scale(1.09);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.darksoul-circle-6:hover {
+  transform: scale(1.09);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.darksoul-circle-8:hover {
+  transform: scale(1.09);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.darksoul-circle-5:hover {
+  transform: scale(1.09);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@keyframes nav-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* @keyframes svg-rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+} */
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff;
+  }
+  25% {
+    text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #0000ff;
+  }
+  50% {
+    text-shadow: 2px -2px 0 #ff0000, -2px 2px 0 #0000ff;
+  }
+  75% {
+    text-shadow: -2px 2px 0 #ff0000, 2px -2px 0 #0000ff;
+  }
+  100% {
+    text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff;
+  }
+}
+
+.glitch {
+  position: relative;
+  animation: glitch 200ms infinite alternate;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -3px 0 red;
+  clip-path: inset(0 0 50% 0); /* Cuts off the bottom half */
+  animation: glitch 150ms infinite alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 3px 0 blue;
+  clip-path: inset(50% 0 0 0); /* Cuts off the top half */
+  animation: glitch 250ms infinite alternate-reverse;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.flicker {
+  animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes vcr-flicker {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  25% {
+    opacity: 0.98;
+    transform: translateX(-0.5px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0.5px);
+  }
+  75% {
+    opacity: 0.99;
+    transform: translateX(-0.5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* VCR text effect */
+.vcr-text {
+  font-family: "VCRMono", monospace;
+  color: #00ff99; /* VHS-style green text */
+  text-shadow: 0px 0px 5px rgba(0, 255, 153, 0.8); /* Neon glow */
+  animation: vcr-flicker 1.5s infinite alternate;
+}
+
+/* Optional: scanlines effect */
+.vcr-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    rgba(0, 0, 0, 0) 2px
+  );
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.project-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative;
+  border-radius: 20px;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.2) 1px,
+    transparent 2px
+  );
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  opacity: 0.4;
+  animation: flicker-p 0.2s infinite alternate;
+}
+
+@keyframes flicker-p {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.project-card:hover img {
+  filter: hue-rotate(10deg) contrast(1.2);
+}
+
+.project-card:hover h4 {
+  text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff;
+}
