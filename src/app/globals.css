@@ -212,7 +212,7 @@ svg {
 
 .glitch {
   position: relative;
-  animation: glitch 200ms infinite alternate;
+  animation: glitch 2s infinite alternate;
 }
 
 .glitch::before,
@@ -228,14 +228,14 @@ svg {
   left: 2px;
   text-shadow: -3px 0 red;
   clip-path: inset(0 0 50% 0); /* Cuts off the bottom half */
-  animation: glitch 150ms infinite alternate-reverse;
+  animation: glitch 1s infinite alternate-reverse;
 }
 
 .glitch::after {
   left: -2px;
   text-shadow: 3px 0 blue;
   clip-path: inset(50% 0 0 0); /* Cuts off the top half */
-  animation: glitch 250ms infinite alternate-reverse;
+  animation: glitch 1s infinite alternate-reverse;
 }
 
 @keyframes flicker {

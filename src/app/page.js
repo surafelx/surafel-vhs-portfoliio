@@ -162,12 +162,12 @@ const ContactMeForm = () => {
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white"
+            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white placeholder-white"
           />
           <textarea
             placeholder="Your Message"
             rows="4"
-            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white"
+            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white placeholder-white"
           ></textarea>
           <button
             type="submit"
@@ -253,10 +253,10 @@ export default function Home() {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
-        setIsPlaying(true);
+        setIsPlaying(false);
       } else {
         audioRef.current.play();
-        setIsPlaying(false);
+        setIsPlaying(true);
       }
     } else {
       setIsPlaying(!isPlaying);
@@ -302,7 +302,7 @@ export default function Home() {
     setCurrentSongIndex(nextIndex);
     setIsPlaying(true);
     if (audioRef.current) {
-      (audioRef.current.src = meData[0]), songs[nextIndex].src;
+      (audioRef.current.src = meData[0]).songs[nextIndex].src;
       audioRef.current.play();
     }
   };
@@ -314,7 +314,7 @@ export default function Home() {
     setCurrentSongIndex(prevIndex);
     setIsPlaying(true);
     if (audioRef.current) {
-      audioRef.current.src = songs[prevIndex].src;
+      audioRef.current.src = meData[0].songs[prevIndex].src;
       audioRef.current.play();
     }
   };
@@ -367,11 +367,11 @@ export default function Home() {
   useEffect(() => {
     const hasVisited = sessionStorage.getItem("hasVisited");
 
-    if (hasVisited) {
-      setLoading(false); // Skip the video if user has visited before
-    }
+    // if (hasVisited) {
+    //   setLoading(false); // Skip the video if user has visited before
+    // }
 
-    fetch("https://api.countapi.xyz/hit/new.surafel.work/visits")
+    fetch("https://api.countapi.xyz/hit/surafel.work/visits")
       .then((res) => res.json())
       .then((data) => setVisitorCount(data.value));
 
@@ -410,17 +410,10 @@ export default function Home() {
   };
 
   const Experience = () => {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-
     return (
       <div className="flex flex-col items-center w-[100%]">
         {meData[0].experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-start w-full mb-2"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
+          <div key={index} className="flex flex-col items-start w-full mb-2">
             <h3 className="bg-white w-[280px] text-black pl-2 text-lg mb-2 uppercase">
               {exp.date}
             </h3>
@@ -443,9 +436,21 @@ export default function Home() {
           <div>
             <div className="h-full overflow-hidden" id="aboutContent">
               <p className="text-3xl font-thin text-justify mb-8">
-                Hi, I’m Surafel Yimam, a Full Stack Software Engineer with over
-                6 years of experience. I create exceptional digital solutions
-                and have a deep passion for technology and innovation.
+                Hi, I’m Surafel Yimam, a Full Stack Software Engineer, I've been coding since I was a kid basically. With over
+                <span className="glitch"> 9 Years </span> of experience, I love to
+                create exceptional and creative digital solutions.
+              </p>
+              <img
+                src={"/images/about.jpeg"}
+                alt={"Visul Basic + ASP.Net + SQL Project in 2016"}
+                className="w-full mb-4 rounded-lg flicker"
+              />
+              <p>
+                <span className="absolute left-[-1rem] opacity-0 transition-opacity group-hover:opacity-100">
+                  &gt;
+                </span>
+                A screenshot a Visul Basic + ASP.Net + SQL Project from 2014 -
+                2016
               </p>
             </div>
           </div>
@@ -612,11 +617,11 @@ export default function Home() {
   return (
     <div
       id="screen"
-      className="bg-gray-800 flex min-h-screen w-screen relative overflow-hidden"
+      className="bg-gray-800 flex h-screen w-screen relative overflow-hidden"
     >
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black z-[1000]">
-          {showPlayButton && (
+          {!showPlayButton && (
             <button
               onClick={() => {
                 startVideo();
@@ -626,7 +631,7 @@ export default function Home() {
                 fontFamily: "VCRMono",
               }}
             >
-              <span className="absolute left-[-1.5rem] opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="absolute left-[-2rem] opacity-0 transition-opacity group-hover:opacity-100">
                 &gt;
               </span>
               TAP TO PLAY
@@ -705,14 +710,14 @@ export default function Home() {
               Hi, I'm
             </p>
             <h1
-              className="text-5xl lg:text-8xl font-bold mb-1 glitch flicker"
+              className="text-5xl sm:text-3xl lg:text-8xl font-bold mb-1 glitch flicker"
               style={{ fontFamily: "VCRNeue" }}
               data-text="SURAFEL YIMAM"
             >
               SURAFEL YIMAM
             </h1>
             <p
-              className="text-2xl lg:text-4xl mb-10 glitch flicker"
+              className="text-2xl sm:text-lg  lg:text-4xl mb-10 glitch flicker"
               style={{ fontFamily: "VCRMono" }}
               data-text="FULL STACK SOFTWARE ENGINEER"
             >
@@ -811,7 +816,7 @@ export default function Home() {
                         setIsMenuOpen(!isMenuOpen);
                       }}
                       key={section}
-                      className="pl-4 mb-1 text-md text-left font-mono relative group transition-all flicker"
+                      className="pl-4 mb-1 text-lg text-left font-mono relative group transition-all flicker"
                       style={{
                         fontFamily: "VCRMono",
                       }}
@@ -884,7 +889,7 @@ export default function Home() {
               )}
             </div>
             <div
-              className="h-full w-full overflow-hidden overflow-y-auto no-scrollbar"
+              className="h-full w-full overflow-hidden overflow-y-auto no-scrollbar pb-10"
               style={{ fontFamily: "VCRNeue" }}
               id="aboutContent"
             >
@@ -892,12 +897,17 @@ export default function Home() {
             </div>
           </>
         )}
-        <div className="absolute bottom-10  shadow-lg w-[90%] px-8 ">
-          <div className="flex items-end justify-between gap-8">
+        <div
+          className={`absolute bottom-[120px] lg:bottom-20  shadow-lg w-[80%] px-8 ${
+            activeSection != "start" && "bg-black"
+          } `}
+        >
+          <div className="flex items-center justify-between gap-8">
             <div className={`flex-start   `}>
               <div
                 className="capitalize text-xs"
                 style={{
+                  lineHeight: "100%",
                   fontFamily: "VCRMono",
                 }}
               >
@@ -906,6 +916,7 @@ export default function Home() {
               <div
                 className="capitalize text-2xl"
                 style={{
+                  lineHeight: "100%",
                   fontFamily: "VCRMono",
                 }}
               >
@@ -919,7 +930,7 @@ export default function Home() {
               style={{
                 background: "rgba(0, 0, 0, 0.8)",
               }}
-              className={`relative max-w-[250px] p-3  border border-white text-white flicker ${
+              className={`absolute bottom-10 right-5 max-w-[250px] p-3  border border-white text-white flicker ${
                 !isAudioPlayerOpen ? "hidden" : "visible"
               }`}
             >
@@ -1138,11 +1149,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div
-              className={`flex gap-2 items-center ${
-                isAudioPlayerOpen ? "hidden" : "visible"
-              }`}
-            >
+            <div className={`flex gap-2 items-center `}>
               <div
                 key={currentSongIndex}
                 className="container"
@@ -1155,7 +1162,7 @@ export default function Home() {
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
                 viewBox="-5.0 -10.0 110.0 135.0"
-                onClick={() => setIsAudioPlayerOpen(true)}
+                onClick={() => setIsAudioPlayerOpen(!isAudioPlayerOpen)}
               >
                 <path
                   fill="#FFF"
