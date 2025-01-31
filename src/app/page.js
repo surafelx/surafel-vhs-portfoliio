@@ -367,9 +367,9 @@ export default function Home() {
   useEffect(() => {
     const hasVisited = sessionStorage.getItem("hasVisited");
 
-    // if (hasVisited) {
-    //   setLoading(false); // Skip the video if user has visited before
-    // }
+    if (hasVisited) {
+      setLoading(false); // Skip the video if user has visited before
+    }
 
     fetch("https://api.countapi.xyz/hit/surafel.work/visits")
       .then((res) => res.json())
@@ -436,9 +436,10 @@ export default function Home() {
           <div>
             <div className="h-full overflow-hidden" id="aboutContent">
               <p className="text-3xl font-thin text-justify mb-8">
-                Hi, I’m Surafel Yimam, a Full Stack Software Engineer, I've been coding since I was a kid basically. With over
-                <span className="glitch"> 9 Years </span> of experience, I love to
-                create exceptional and creative digital solutions.
+                Hi, I’m Surafel Yimam, a Full Stack Software Engineer, I've been
+                coding since I was a kid basically. With over
+                <span className="glitch"> 9 Years </span> of experience, I love
+                to create exceptional and creative digital solutions.
               </p>
               <img
                 src={"/images/about.jpeg"}
