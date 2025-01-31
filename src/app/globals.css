@@ -307,6 +307,7 @@ svg {
 
 .project-card:hover {
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .project-card::before {
@@ -346,4 +347,84 @@ svg {
 
 .project-card:hover h4 {
   text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff;
+}
+
+.slider {
+  -webkit-appearance: none;
+  background: transparent;
+  height: 1px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* for chrome/safari */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 6px;
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.seek-slider {
+  -webkit-appearance: none;
+  background: transparent;
+  height: 10px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* for chrome/safari */
+.seek-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  width: 10px;
+  background: white;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+/* for firefox */
+
+#container {
+  width: 70px;
+  height: 30px;
+  overflow: hidden;
+}
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+.marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-right: 20px; /* Space between loops */
+  animation: marquee-scroll 20s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-wrapper:hover .marquee-text {
+  animation-play-state: paused;
 }

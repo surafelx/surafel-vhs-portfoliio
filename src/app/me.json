@@ -1,0 +1,575 @@
+[
+    {
+      "projects": [
+        {
+          "title": "AUTONOMY POWER",
+          "subtitle": "SOLAR POWER MANAGEMENT SYSTEM",
+          "image": "/images/1.png",
+          "description": "During my time in <a href='https://itio.dev'>ITIO.dev</a>, I was part of developing a solar energy management platform.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+            "https://cdn-icons-png.flaticon.com/512/10464/10464288.png",
+            "https://cdn-icons-png.flaticon.com/512/1126/1126012.png"
+          ],
+          "longDescription": [
+            {
+              "firstParagraph": "Autonomy Power is a cutting-edge solar energy management system designed to optimize and distribute energy efficiently. My role in the project involved full-stack development, implementing test-driven development (TDD), and ensuring the platform maintained high performance and security.",
+              "secondParagraph": "I also worked on CI/CD pipelines, streamlining deployments and automating testing processes. Additionally, I refactored large portions of the codebase to improve maintainability and scalability, ensuring the system's long-term efficiency."
+            }
+          ],
+          "whatIDid": [
+            {
+              "title": "Test-Driven Development (TDD)",
+              "description": "Ensured high-quality code through rigorous automated testing."
+            },
+            {
+              "title": "Full Stack Development",
+              "description": "Developed both frontend and backend for the AI-powered pet art generator."
+            },
+            {
+              "title": "CI/CD Pipelines",
+              "description": "Set up automated testing and deployment workflows."
+            },
+            {
+              "title": "Code Refactoring",
+              "description": "Improved system maintainability and performance by optimizing code."
+            },
+            {
+              "title": "Manual Testing",
+              "description": "Tested AI-generated images for quality assurance and accuracy."
+            }
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about",
+              "video": "/videos/surafel-interaction.mp4"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "APP",
+              "section": "about",
+              "video": "/videos/surafel-interaction.mp4"
+            },
+            {
+              "label": "WORK",
+              "section": "projects"
+            },
+            {
+              "label": "ENERGY",
+              "section": "experience"
+            },
+            {
+              "label": "ANALYTICS",
+              "section": "experience"
+            }
+          ]
+        },
+        {
+          "title": "PETGEN.ART",
+          "subtitle": "AI-POWERED IMAGE GENERATOR",
+          "image": "/images/3.png",
+          "description": "AI-powered pet image generator creating unique, high-quality pet avatars based on user preferences.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+            "https://cdn-icons-png.flaticon.com/512/10464/10464288.png",
+            "https://cdn-icons-png.flaticon.com/512/1126/1126012.png"
+          ],
+          "longDescription": [
+            {
+              "firstParagraph": "PetGen Art is a platform that leverages artificial intelligence to create unique pet illustrations. My responsibilities included full-stack development, integrating OpenAI’s DALL-E API, and optimizing the system for high performance and scalability.",
+              "secondParagraph": "I implemented TDD to ensure code reliability and utilized CI/CD pipelines for automated testing and deployment. Additionally, I refactored the application to improve efficiency, ensuring seamless AI-generated artwork production."
+            }
+          ],
+          "whatIDid": [
+            {
+              "title": "Test-Driven Development (TDD)",
+              "description": "Ensured high-quality code through rigorous automated testing."
+            },
+            {
+              "title": "Full Stack Development",
+              "description": "Developed both frontend and backend for the AI-powered pet art generator."
+            },
+            {
+              "title": "CI/CD Pipelines",
+              "description": "Set up automated testing and deployment workflows."
+            },
+            {
+              "title": "Code Refactoring",
+              "description": "Improved system maintainability and performance by optimizing code."
+            },
+            {
+              "title": "Manual Testing",
+              "description": "Tested AI-generated images for quality assurance and accuracy."
+            }
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "APP",
+              "section": "about",
+              "video": "/videos/surafel-interaction.mp4"
+            },
+            {
+              "label": "WORK",
+              "section": "projects"
+            },
+            {
+              "label": "AI",
+              "section": "experience"
+            },
+            {
+              "label": "PAYMENT",
+              "section": "experience"
+            }
+          ]
+        },
+        {
+          "title": "ASUN PAY",
+          "subtitle": "SECURE PAYROLL MANAGEMENT SYSTEM",
+          "image": "/images/2.png",
+          "description": "A secure payroll management system automating salary processing and transactions efficiently.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+            "https://cdn-icons-png.flaticon.com/512/1126/1126012.png"
+          ],
+          "longDescription": [
+            {
+              "firstParagraph": "Asun is a cutting-edge web application built using modern technologies like TypeScript, React, and Next.js. My role focused on frontend development, ensuring a seamless user experience and an intuitive interface. I worked extensively on UI/UX design, implementing dynamic layouts and interactive elements that enhance usability. Additionally, I played a key role in maintaining and improving code quality through test-driven development (TDD) and continuous refactoring.",
+              "secondParagraph": "To ensure smooth deployment and scalability, I integrated CI/CD pipelines that automated testing and deployment workflows, reducing manual intervention and increasing efficiency. My contributions also extended to providing technical support and refining project features post-launch, ensuring optimal performance and user satisfaction."
+            }
+          ],
+          "whatIDid": [
+            {
+              "title": "Frontend Development",
+              "description": "Designed and implemented intuitive user interfaces with a strong focus on UI/UX best practices."
+            },
+            {
+              "title": "Test-Driven Development (TDD)",
+              "description": "Wrote unit and integration tests to ensure robust and maintainable code."
+            },
+            {
+              "title": "Full Stack Development",
+              "description": "Contributed to both frontend and backend development to optimize overall system functionality."
+            },
+            {
+              "title": "CI/CD Pipelines",
+              "description": "Set up automated deployment workflows to streamline the development process."
+            },
+            {
+              "title": "Code Refactoring",
+              "description": "Enhanced code readability and maintainability by applying industry-standard refactoring techniques."
+            },
+            {
+              "title": "Support & Maintenance",
+              "description": "Provided ongoing technical support and feature enhancements to improve user experience."
+            }
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "APP",
+              "section": "about",
+              "video": "/videos/surafel-interaction.mp4"
+            },
+            {
+              "label": "WORK",
+              "section": "projects"
+            },
+            {
+              "label": "PAYMENT",
+              "section": "experience"
+            },
+            {
+              "label": "ANALYTICS",
+              "section": "experience"
+            }
+          ]
+        },
+        {
+          "title": "AGRISUN ETHIOPIA",
+          "subtitle": "MARKETING SITE",
+          "image": "/images/4.png",
+          "description": "An HTML, CSS, and JavaScript-based site integrated with a CMS, promoting sustainable agricultural solutions.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/174/174854.png",
+            "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+          ],
+          "longDescription": [
+            {
+              "firstParagraph": "AgriSun Ethiopia Engineering is a content-driven platform that provides engineering insights and project information. My role focused on frontend development, ensuring a well-structured and user-friendly interface.",
+              "secondParagraph": "I also built the CMS pipeline using Strapi, allowing easy content management and dynamic updates. Additionally, I authored various technical articles to enhance the platform's value and reach."
+            }
+          ],
+          "whatIDid": [
+            {
+              "title": "Frontend Development",
+              "description": "Designed and implemented a responsive and interactive UI."
+            },
+            {
+              "title": "CMS Pipeline",
+              "description": "Developed a Strapi-based content management system for easy updates."
+            },
+            {
+              "title": "Article Writing",
+              "description": "Authored and published engineering-related articles for the platform."
+            }
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "SUSTAINABILITY",
+              "section": "about"
+            },
+            {
+              "label": "AGRICULTURE",
+              "section": "projects"
+            },
+            {
+              "label": "INNOVATION",
+              "section": "experience"
+            }
+          ]
+        },
+        {
+          "title": "DIGITAL LEARNING HUB",
+          "subtitle": "MARKETING SITE",
+          "image": "/images/6.png",
+          "description": "A dynamic, community-driven learning platform combining innovative technologies with personalized education for the future.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/174/174854.png",
+            "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "EDUCATION",
+              "section": "about"
+            },
+            {
+              "label": "INNOVATION",
+              "section": "projects"
+            },
+            {
+              "label": "COMMUNITY",
+              "section": "experience"
+            }
+          ]
+        },
+        {
+          "title": "MULTIFACET SOLUTION",
+          "subtitle": "MARKETING SITE",
+          "image": "/images/5.png",
+          "description": "A cutting-edge logistics platform built on Squarespace, designed to streamline operations with innovative tools.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/174/174854.png",
+            "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+    
+          ],
+          "longDescription": [
+            {
+              "firstParagraph": "Multifacet Solution is an all-in-one platform designed to automate business processes, improve workflow efficiency, and enhance digital presence. My role included designing the UI/UX and integrating custom functionality within the SquareSpace ecosystem.",
+              "secondParagraph": "I also built a structured CMS pipeline to allow dynamic content updates and ensure scalability. Additionally, I authored business-related articles to support users in maximizing the platform’s potential."
+            }
+          ],
+          "whatIDid": [
+            {
+              "title": "Frontend Development",
+              "description": "Created a seamless user experience by designing and developing a visually engaging interface."
+            },
+            {
+              "title": "CMS Pipeline",
+              "description": "Integrated a CMS within SquareSpace to enable dynamic content updates."
+            },
+            {
+              "title": "Article Writing",
+              "description": "Wrote articles on business automation and platform usability."
+            }
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "LOGISTICS",
+              "section": "about"
+            },
+            {
+              "label": "TECHNOLOGY",
+              "section": "projects"
+            },
+            {
+              "label": "EFFICIENCY",
+              "section": "experience"
+            }
+          ]
+        },
+        {
+          "title": "EMPIRE LEAD MACHINE",
+          "subtitle": "MARKETING SITE",
+          "image": "/images/7.png",
+          "description": "A powerful executive empowerment platform built on GoHighLevel, offering leadership growth and strategic innovation.",
+          "techIcons": [
+            "https://cdn-icons-png.flaticon.com/512/174/174854.png",
+            "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+            "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+          ],
+          "longDescription": [
+            {
+              "firstParagraph": "Empire Lead Machine is designed to automate lead generation and enhance customer engagement. My responsibilities included designing the platform’s UI/UX and ensuring smooth integrations with GoHighLevel.",
+              "secondParagraph": "I also implemented a content management system (CMS) to facilitate dynamic updates and optimize content distribution. Additionally, I wrote marketing-focused articles to guide users in leveraging the platform effectively."
+            }
+          ],
+          "whatIDid": [
+            {
+              "title": "Frontend Development",
+              "description": "Designed and implemented a lead capture system with an intuitive UI."
+            },
+            {
+              "title": "CMS Pipeline",
+              "description": "Developed a structured CMS for lead data management and content updates."
+            },
+            {
+              "title": "Article Writing",
+              "description": "Wrote content on lead generation strategies and sales optimization."
+            }
+          ],
+          "actions": [
+            {
+              "label": "MORE",
+              "section": "about"
+            },
+            {
+              "label": "SITE",
+              "section": "projects"
+            },
+            {
+              "label": "CODE",
+              "section": "experience"
+            }
+          ],
+          "tags": [
+            {
+              "label": "EXECUTIVES",
+              "section": "about"
+            },
+            {
+              "label": "LEADERSHIP",
+              "section": "projects"
+            },
+            {
+              "label": "INNOVATION",
+              "section": "experience"
+            }
+          ]
+        }
+      ],
+      "socialLinks": [
+        {
+          "name": "Email",
+          "link": "mailto:surafel.yimam@celerus.io"
+        },
+        {
+          "name": "LinkedIn",
+          "link": "https://linkedin.com/in/surafel-kebede"
+        },
+        {
+          "name": "Telegram",
+          "link": "https://t.me/YouAreTheThingILoveMost"
+        },
+        {
+          "name": "GitHub",
+          "link": "https://github.com/surafelx"
+        }
+      ],
+      "songs":[
+        {
+          "title": "  Whispers of Stardust",
+          "seller": "Luna Pheonix",
+          "src": "/audio/lofi-1.mp3"
+        },
+        {
+          "title": "    Ballet of the Fireflies",
+          "seller": "The Honeydoves",
+          "src": "/audio/lofi-2.mp3"
+        },
+        {
+          "title": "   Polaroid Dreams",
+          "seller": "Elysian Waves",
+          "src": "/audio/lofi-3.mp3"
+        },
+        {
+          "title": "   Lavender Skies and Paper Plans",
+          "seller": "Moss & Maple",
+          "src": "/audio/lofi-4.mp3"
+        },
+        {
+          "title": "     Sunshine in My Teacup",
+          "seller": "HoneyHaze",
+          "src": "/audio/lofi-5.mp3"
+        },
+        {
+          "title": "Waltzing with Moonbeams",
+          "seller": "Petal & Parchment",
+          "src": "/audio/lofi-6.mp3"
+        }
+      ],
+      "videoSources": [
+        "/videos/surafel-interaction.mp4",
+        "/videos/surafel-guitar.mp4",
+        "/videos/surafel-cat.mp4",
+        "/videos/surafel-book.mp4"
+      ],
+      "sectionTitles": {
+        "about": "ABOUT",
+        "projects": "PROJECTS",
+        "experience": "EXPERIENCE",
+        "other": "OTHER",
+        "contact": "CONTACT",
+        "project-detail": "DETAILS"
+      },
+      "menuItems": [
+        {
+          "label": "ABOUT",
+          "section": "about",
+          "video": "/videos/surafel-interaction.mp4"
+        },
+        {
+          "label": "PROJECTS",
+          "section": "projects"
+        },
+        {
+          "label": "EXPERIENCE",
+          "section": "experience"
+        },
+        {
+          "label": "OTHER",
+          "section": "other"
+        },
+        {
+          "label": "CONTACT",
+          "section": "contact"
+        }
+      ],
+      "experiences": [
+        {
+          "date": "AUG 2024 - JAN 2025",
+          "title": "INDEPENDENT CONTRACTOR",
+          "description": "Worked independently on data migration, Salesforce automation, and cloud-based solutions using Python, Google Cloud Platform, and Azure Vector Search. Provided backend and infrastructure support, optimizing workflows and improving data integrity across multiple systems."
+        },
+        {
+          "date": "JAN 2023 - AUG 2024",
+          "title": "TECH LEAD - AGRISUN ENGINEERING",
+          "description": "Led the development of technology solutions, from marketing websites to embedded systems for monitoring inverter output, solar energy generation, and water pump efficiency. Designed and deployed software solutions for internal and client-facing applications, integrating IoT for real-time data tracking."
+        },
+        {
+          "date": "JUL 2020 - JAN 2023",
+          "title": "FULL-STACK ENGINEER - ITIO.DEV",
+          "description": "Developed and deployed full-stack web applications using the PERN and MERN stacks. Implemented Test-Driven Development (TDD) practices, built scalable front-end solutions, optimized backend performance, and established CI/CD pipelines for seamless deployments."
+        },
+        {
+          "date": "JUN 2019 - JUL 2020",
+          "title": "INDEPENDENT CONTRACTOR",
+          "description": "Designed and built an embedded system for tracking solar energy metrics, including energy input/output, temperature, humidity, and other environmental factors. Developed a cloud-based platform for real-time monitoring and data visualization."
+        },
+        {
+          "date": "AUG 2018 - JUN 2019",
+          "title": "SOFTWARE ENGINEER - SOLARVILLAGE",
+          "description": "Developed and maintained the company website, implemented an IT inventory management system, and assisted in hardware installations. Led software solutions for stock tracking and automated reporting while providing IT support and mentoring interns."
+        }
+      ],
+      "otherItems": [
+        {
+          "label": "learning to play guitar.",
+          "videoIndex": 1
+        },
+        {
+          "label": "taking care of my cat.",
+          "videoIndex": 2
+        },
+        {
+          "label": "reading a book.",
+          "videoIndex": 3
+        }
+      ]
+    },
+    ";"
+  ]

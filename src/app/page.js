@@ -1,177 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-
-const projects = [
-  {
-    title: "AUTONOMY POWER",
-    subtitle: "SOLAR POWER MANAGEMENT SYSTEM",
-    image: "/images/1.png",
-    description:
-      "During my time in <a href='https://itio.dev'>ITIO.dev</a>, I was part of developing a solar energy management platform.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
-    ],
-    actions: [
-      {
-        label: "MORE",
-        section: "about",
-        video: "/videos/surafel-interaction.mp4",
-      },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      {
-        label: "APP",
-        section: "about",
-        video: "/videos/surafel-interaction.mp4",
-      },
-      { label: "WORK", section: "projects" },
-      { label: "ENERGY", section: "experience" },
-      { label: "ANALYTICS", section: "experience" },
-    ],
-  },
-  {
-    title: "PETGEN.ART",
-    subtitle: "AI-POWERED IMAGE GENERATOR",
-    image: "/images/3.png",
-    description:
-      "AI-powered pet image generator creating unique, high-quality pet avatars based on user preferences.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/226/226777.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
-    ],
-    actions: [
-      { label: "MORE", section: "about" },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      {
-        label: "APP",
-        section: "about",
-        video: "/videos/surafel-interaction.mp4",
-      },
-      { label: "WORK", section: "projects" },
-      { label: "AI", section: "experience" },
-      { label: "PAYMENT", section: "experience" },
-    ],
-  },
-  {
-    title: "ASUN PAY",
-    subtitle: "SECURE PAYROLL MANAGEMENT SYSTEM",
-    image: "/images/2.png",
-    description:
-      "A secure payroll management system automating salary processing and transactions efficiently.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/919/919825.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
-    ],
-    actions: [
-      { label: "MORE", section: "about" },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      {
-        label: "APP",
-        section: "about",
-        video: "/videos/surafel-interaction.mp4",
-      },
-      { label: "WORK", section: "projects" },
-      { label: "PAYMENT", section: "experience" },
-      { label: "ANALYTICS", section: "experience" },
-    ],
-  },
-
-  {
-    title: "AGRISUN ETHIOPIA",
-    subtitle: "MARKETING SITE",
-    image: "/images/4.png",
-    description:
-      "An HTML, CSS, and JavaScript-based site integrated with a CMS, promoting sustainable agricultural solutions.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/620/620030.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
-    ],
-    actions: [
-      { label: "MORE", section: "about" },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      { label: "SUSTAINABILITY", section: "about" },
-      { label: "AGRICULTURE", section: "projects" },
-      { label: "INNOVATION", section: "experience" },
-    ],
-  },
-  {
-    title: "DIGITAL LEARNING HUB",
-    subtitle: "MARKETING SITE",
-    image: "/images/5.png",
-    description:
-      "A dynamic, community-driven learning platform combining innovative technologies with personalized education for the future.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/226/226778.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
-    ],
-    actions: [
-      { label: "MORE", section: "about" },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      { label: "EDUCATION", section: "about" },
-      { label: "INNOVATION", section: "projects" },
-      { label: "COMMUNITY", section: "experience" },
-    ],
-  },
-  {
-    title: "MULTIFACET SOLUTION",
-    subtitle: "MARKETING SITE",
-    image: "/images/6.png",
-    description:
-      "A cutting-edge logistics platform built on Squarespace, designed to streamline operations with innovative tools.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/226/226777.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
-    ],
-    actions: [
-      { label: "MORE", section: "about" },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      { label: "LOGISTICS", section: "about" },
-      { label: "TECHNOLOGY", section: "projects" },
-      { label: "EFFICIENCY", section: "experience" },
-    ],
-  },
-  {
-    title: "EMPIRE LEAD MACHINE",
-    subtitle: "MARKETING SITE",
-    image: "/images/7.png",
-    description:
-      "A powerful executive empowerment platform built on GoHighLevel, offering leadership growth and strategic innovation.",
-    techIcons: [
-      "https://cdn-icons-png.flaticon.com/512/226/226779.png",
-      "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
-    ],
-    actions: [
-      { label: "MORE", section: "about" },
-      { label: "SITE", section: "projects" },
-      { label: "CODE", section: "experience" },
-    ],
-    tags: [
-      { label: "EXECUTIVES", section: "about" },
-      { label: "LEADERSHIP", section: "projects" },
-      { label: "INNOVATION", section: "experience" },
-    ],
-  },
-];
+import AudioMotionAnalyzer from "audiomotion-analyzer";
+import meData from "./me.json"; // Import the JSON file
 
 const ContactMeForm = () => {
   const [copyMessage, setCopyMessage] = useState("");
@@ -186,15 +16,7 @@ const ContactMeForm = () => {
     <div className="flex items-center ">
       <div className="w-full p-6 rounded-2xl shadow-lg">
         <div className="mb-8 flex gap-4">
-          {[
-            { name: "Email", link: "mailto:surafel.yimam@celerus.io" },
-            {
-              name: "LinkedIn",
-              link: "https://linkedin.com/in/surafel-kebede",
-            },
-            { name: "Telegram", link: "https://t.me/YouAreTheThingILoveMost" },
-            { name: "GitHub", link: "https://github.com/surafelx" },
-          ].map((social, index) => (
+          {meData[0].socialLinks.map((social, index) => (
             <button
               key={index}
               onClick={() => copyToClipboard(social.link)}
@@ -202,125 +24,126 @@ const ContactMeForm = () => {
             >
               {social.name == "Email" ? (
                 <svg
-                  height="40px"
-                  viewBox="0 0 24 24"
+                  height="30px"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
-                      fill="#ffffff"
-                    ></path>{" "}
-                  </g>
+                  {" "}
+                  <path
+                    d="M22 4H2v16h20V4zM4 18V6h16v12H4zM8 8H6v2h2v2h2v2h4v-2h2v-2h2V8h-2v2h-2v2h-4v-2H8V8z"
+                    fill="#FFF"
+                  />{" "}
                 </svg>
               ) : social.name == "LinkedIn" ? (
-                <svg
-                  fill="#FFF"
-                  height="30px"
-                  version="1.1"
-                  id="Layer_1"
-                  viewBox="0 0 310 310"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <g id="XMLID_801_">
-                      {" "}
-                      <path
-                        id="XMLID_802_"
-                        d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z"
-                      ></path>{" "}
-                      <path
-                        id="XMLID_803_"
-                        d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"
-                      ></path>{" "}
-                      <path
-                        id="XMLID_804_"
-                        d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319 c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995 C310,145.43,300.549,94.761,230.454,94.761z"
-                      ></path>{" "}
-                    </g>{" "}
-                  </g>
-                </svg>
+                <span className="text-xl text-white">in</span>
               ) : social.name == "Telegram" ? (
                 <svg
                   height="40px"
-                  fill="#ffffff"
-                  viewBox="0 0 256 256"
-                  id="Flat"
                   xmlns="http://www.w3.org/2000/svg"
-                  stroke="#ffffff"
-                  stroke-width="4.608"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  viewBox="0 0 32 32"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path d="M228.646,34.7676a11.96514,11.96514,0,0,0-12.21778-2.0752L31.87109,105.19729a11.99915,11.99915,0,0,0,2.03467,22.93457L84,138.15139v61.833a11.8137,11.8137,0,0,0,7.40771,11.08593,12.17148,12.17148,0,0,0,4.66846.94434,11.83219,11.83219,0,0,0,8.40918-3.5459l28.59619-28.59619L175.2749,217.003a11.89844,11.89844,0,0,0,7.88819,3.00195,12.112,12.112,0,0,0,3.72265-.59082,11.89762,11.89762,0,0,0,8.01319-8.73925L232.5127,46.542A11.97177,11.97177,0,0,0,228.646,34.7676ZM32.2749,116.71877a3.86572,3.86572,0,0,1,2.522-4.07617L203.97217,46.18044,87.07227,130.60769,35.47461,120.28811A3.86618,3.86618,0,0,1,32.2749,116.71877Zm66.55322,86.09375A3.99976,3.99976,0,0,1,92,199.9844V143.72048l35.064,30.85669ZM224.71484,44.7549,187.10107,208.88772a4.0003,4.0003,0,0,1-6.5415,2.10937l-86.1543-75.8164,129.66309-93.645A3.80732,3.80732,0,0,1,224.71484,44.7549Z"></path>{" "}
-                  </g>
+                  <rect width="12" height="2" x="10" y="4" fill="#FFF"></rect>
+                  <rect
+                    width="12"
+                    height="2"
+                    x="21"
+                    y="15"
+                    fill="#FFF"
+                    transform="rotate(90 27 16)"
+                  ></rect>
+                  <rect
+                    width="2"
+                    height="2"
+                    x="22"
+                    y="6"
+                    fill="#FFF"
+                    transform="rotate(-180 23 7)"
+                  ></rect>
+                  <rect
+                    width="2"
+                    height="2"
+                    x="24"
+                    y="8"
+                    fill="#FFF"
+                    transform="rotate(-180 25 9)"
+                  ></rect>
+                  <rect
+                    width="2"
+                    height="2"
+                    x="22"
+                    y="24"
+                    fill="#FFF"
+                    transform="rotate(-180 23 25)"
+                  ></rect>
+                  <rect
+                    width="2"
+                    height="2"
+                    x="24"
+                    y="22"
+                    fill="#FFF"
+                    transform="rotate(-180 25 23)"
+                  ></rect>
+                  <rect
+                    width="12"
+                    height="2"
+                    x="10"
+                    y="26"
+                    fill="#FFF"
+                    transform="rotate(-180 16 27)"
+                  ></rect>
+                  <rect
+                    width="12"
+                    height="2"
+                    x="-1"
+                    y="15"
+                    fill="#FFF"
+                    transform="rotate(-90 5 16)"
+                  ></rect>
+                  <rect width="2" height="2" x="8" y="24" fill="#FFF"></rect>
+                  <rect width="2" height="2" x="6" y="22" fill="#FFF"></rect>
+                  <rect
+                    width="2"
+                    height="2"
+                    x="8"
+                    y="6"
+                    fill="#FFF"
+                    transform="rotate(-90 9 7)"
+                  ></rect>
+                  <rect
+                    width="2"
+                    height="2"
+                    x="6"
+                    y="8"
+                    fill="#FFF"
+                    transform="rotate(-90 7 9)"
+                  ></rect>
+                  <rect width="3" height="2" x="8" y="15" fill="#FFF"></rect>
+                  <rect width="2" height="2" x="11" y="13" fill="#FFF"></rect>
+                  <rect width="4" height="2" x="13" y="11" fill="#FFF"></rect>
+                  <polygon
+                    fill="#FFF"
+                    points="17,9 17,11 19,11 19,19 15,19 15,21 19,21 19,23 21,23 21,9"
+                  ></polygon>
+                  <polygon
+                    fill="#FFF"
+                    points="13,15 13,17 11,17 11,21 13,21 13,19 15,19 15,15"
+                  ></polygon>
                 </svg>
               ) : social.name == "GitHub" ? (
                 <svg
                   height="40px"
-                  viewBox="0 0 20 20"
-                  version="1.1"
-                  fill="#000000"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <g
-                      id="Page-1"
-                      stroke="none"
-                      stroke-width="1"
-                      fill="none"
-                      fill-rule="evenodd"
-                    >
-                      {" "}
-                      <g
-                        id="Dribbble-Light-Preview"
-                        transform="translate(-140.000000, -7559.000000)"
-                        fill="#ffffff"
-                      >
-                        {" "}
-                        <g
-                          id="icons"
-                          transform="translate(56.000000, 160.000000)"
-                        >
-                          {" "}
-                          <path
-                            d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
-                            id="github-[#ffffff]"
-                          >
-                            {" "}
-                          </path>{" "}
-                        </g>{" "}
-                      </g>{" "}
-                    </g>{" "}
-                  </g>
+                  {" "}
+                  <path
+                    fill="#FFF"
+                    d="M5 2h4v2H7v2H5V2Zm0 10H3V6h2v6Zm2 2H5v-2h2v2Zm2 2v-2H7v2H3v-2H1v2h2v2h4v4h2v-4h2v-2H9Zm0 0v2H7v-2h2Zm6-12v2H9V4h6Zm4 2h-2V4h-2V2h4v4Zm0 6V6h2v6h-2Zm-2 2v-2h2v2h-2Zm-2 2v-2h2v2h-2Zm0 2h-2v-2h2v2Zm0 0h2v4h-2v-4Z"
+                  />{" "}
                 </svg>
               ) : (
                 <></>
@@ -334,17 +157,17 @@ const ContactMeForm = () => {
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white placeholder-white"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white"
           />
           <textarea
             placeholder="Your Message"
             rows="4"
-            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-full p-3 border bg-transparent border-gray-300 focus:outline-none focus:ring focus:ring-white"
           ></textarea>
           <button
             type="submit"
@@ -353,6 +176,7 @@ const ContactMeForm = () => {
             Send Message
           </button>
         </form>
+
         {copyMessage && (
           <p className="mt-4 text-center text-green-500 text-sm">
             {copyMessage}
@@ -364,29 +188,166 @@ const ContactMeForm = () => {
 };
 export default function Home() {
   const [activeSection, setActiveSection] = useState("start");
-  const [videoSrc, setVideoSrc] = useState("/videos/surafel-interaction.mp4");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVideoChanging, setIsVideoChanging] = useState(false);
-  const [isUserScrolling, setIsUserScrolling] = useState(false);
-  const [visibleProjects, setVisibleProjects] = useState("");
 
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const [selectedProject, setSelectedProjects] = useState("");
   const [loading, setLoading] = useState(true);
   const [showPlayButton, setShowPlayButton] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true); // state to track if the music is playing
+
   const videoRef = useRef();
   const audioRef = useRef();
 
-  const menuItems = [
-    {
-      label: "ABOUT",
-      section: "about",
-      video: "/videos/surafel-interaction.mp4",
-    },
-    { label: "PROJECTS", section: "projects" },
-    { label: "EXPERIENCE", section: "experience" },
-    { label: "OTHER", section: "other" },
-    { label: "CONTACT", section: "contact" },
-  ];
+  const [currentSongIndex, setCurrentSongIndex] = useState(0); // Random song on load
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.25); // Volume starts at 25%
+  const [progress, setProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const [isAudioPlayerOpen, setIsAudioPlayerOpen] = useState(false);
+  const currentSong = meData[0].songs[currentSongIndex]; // Ensure `songs` is the correct list variable
+  const visualizerRef = useRef(null);
+
+  const [visitorCount, setVisitorCount] = useState(0);
+
+  // State management for shuffle and repeat
+  const [isShuffle, setIsShuffle] = useState(false);
+  const [isRepeat, setIsRepeat] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    setCurrentSongIndex(Math.floor(Math.random() * meData[0].songs.length));
+  }, []);
+  useEffect(() => {
+    const audioMotion = new AudioMotionAnalyzer(visualizerRef.current, {
+      source: audioRef.current,
+      mode: 6,
+      bgAlpha: 0,
+      fillAlpha: 0,
+      lineWidth: 1,
+      lumiBars: false,
+      maxFreq: 16000,
+      radial: false,
+      reflexAlpha: 1,
+      reflexBright: 1,
+      reflexRatio: 0.5,
+      showBgColor: false,
+      showPeaks: false,
+      overlay: true,
+      frequencyScale: null,
+      frequencyScale: null,
+      showScaleX: false,
+      showScaleY: false,
+      barSpace: 1,
+    });
+    audioMotion.registerGradient("whiteGradient", {
+      colorStops: [
+        { pos: 0, color: "#FFFFFF" },
+        { pos: 0.5, color: "#FFFFFF" },
+        { pos: 1, color: "#FFFFFF" },
+      ],
+    });
+    audioMotion.setOptions({ gradient: "whiteGradient" });
+  }, [currentSongIndex]);
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(true);
+      } else {
+        audioRef.current.play();
+        setIsPlaying(false);
+      }
+    } else {
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
+  };
+
+  const handleProgressChange = (e) => {
+    const newTime = parseFloat(e.target.value);
+    setProgress(newTime);
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setProgress(audioRef.current.currentTime);
+      setDuration(audioRef.current.duration);
+    }
+  };
+
+  const handleNext = () => {
+    let nextIndex;
+
+    setAnimationKey((prev) => prev + 1); // Restart animation
+
+    if (isShuffle) {
+      // Get a random song index if shuffle is enabled
+      nextIndex = Math.floor(Math.random() * meData[0].songs.length);
+    } else {
+      // Otherwise, just go to the next song
+      nextIndex = (currentSongIndex + 1) % meData[0].songs.length;
+    }
+
+    setCurrentSongIndex(nextIndex);
+    setIsPlaying(true);
+    if (audioRef.current) {
+      (audioRef.current.src = meData[0]), songs[nextIndex].src;
+      audioRef.current.play();
+    }
+  };
+
+  const handlePrevious = () => {
+    setAnimationKey((prev) => prev + 1); // Restart animation
+    const prevIndex =
+      (currentSongIndex - 1 + meData[0].songs.length) % meData[0].songs.length; // Fix for previous button to avoid negative index
+    setCurrentSongIndex(prevIndex);
+    setIsPlaying(true);
+    if (audioRef.current) {
+      audioRef.current.src = songs[prevIndex].src;
+      audioRef.current.play();
+    }
+  };
+
+  // Shuffle Function (toggle shuffle on/off)
+  const handleShuffleToggle = () => {
+    setIsShuffle(!isShuffle);
+  };
+
+  // Repeat Function (toggle repeat on/off)
+  const handleRepeatToggle = () => {
+    setIsRepeat(!isRepeat);
+    if (isRepeat) {
+      // Set to play again when the song finishes
+      audioRef.current.onended = () => {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+        setIsPlaying(true);
+      };
+    } else {
+      // Remove repeat behavior
+      audioRef.current.onended = null;
+    }
+  };
+
+  // Listen for when the song ends and apply repeat functionality if enabled
+  useEffect(() => {
+    if (audioRef.current && isRepeat) {
+      audioRef.current.onended = () => {
+        handleRepeat(); // Will repeat the current song
+      };
+    }
+  }, [isRepeat]);
 
   const preloadFonts = () => {
     console.log("🔄 Preloading fonts...");
@@ -395,103 +356,65 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.src = meData[0].songs[currentSongIndex].src;
+      audioRef.current.load();
+      if (isPlaying) {
+        audioRef.current.play();
+      }
+    }
+  }, [currentSongIndex, isPlaying]);
+  useEffect(() => {
     const hasVisited = sessionStorage.getItem("hasVisited");
 
     if (hasVisited) {
       setLoading(false); // Skip the video if user has visited before
     }
+
+    fetch("https://api.countapi.xyz/hit/new.surafel.work/visits")
+      .then((res) => res.json())
+      .then((data) => setVisitorCount(data.value));
+
     setTimeout(() => {
       preloadFonts();
-      setShowPlayButton(true); // Hide the button after clicking
+      setShowPlayButton(true);
       console.log("✅ Fonts preloaded (3s mark)");
     }, 3000);
   }, []);
 
   const preloadVideos = () => {
     console.log("🔄 Preloading videos...");
-    const videoFiles = [
-      "/videos/loader.mp4",
-      "/videos/surafel-introduction.mp4",
-      "/videos/surafel-interaction.mp4",
-      "/videos/surafel-guitar.mp4",
-      "/videos/surafel-cat.mp4",
-      "/videos/surafel-guitar.mp4",
-    ];
-    videoFiles.forEach((src) => {
+    meData[0].videoSources.forEach((src) => {
       const video = document.createElement("video");
       video.src = src;
       video.preload = "auto";
     });
   };
 
-  const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying); // Toggle the playing state
-    }
-  };
-
   const startVideo = () => {
     if (videoRef.current) {
       videoRef.current.play();
     }
-    setShowPlayButton(false); // Hide the button after clicking
+    setShowPlayButton(false);
     preloadVideos();
-    // Play lofi music after 7 seconds
     setTimeout(() => {
       if (audioRef.current) {
         audioRef.current.play();
       }
-    }, 7000);
+    }, 5000);
 
-    // Show site after 10s
     setTimeout(() => {
       setLoading(false);
       sessionStorage.setItem("hasVisited", "true");
     }, 10000);
   };
-  const experiences = [
-    {
-      date: "AUG 2024 - JAN 2025",
-      title: "INDEPENDENT CONTRACTOR",
-      description:
-        "Worked independently on data migration, Salesforce automation, and cloud-based solutions using Python, Google Cloud Platform, and Azure Vector Search. Provided backend and infrastructure support, optimizing workflows and improving data integrity across multiple systems.",
-    },
-    {
-      date: "JAN 2023 - AUG 2024",
-      title: "TECH LEAD - AGRISUN ENGINEERING",
-      description:
-        "Led the development of technology solutions, from marketing websites to embedded systems for monitoring inverter output, solar energy generation, and water pump efficiency. Designed and deployed software solutions for internal and client-facing applications, integrating IoT for real-time data tracking.",
-    },
-    {
-      date: "JUL 2020 - JAN 2023",
-      title: "FULL-STACK ENGINEER - ITIO.DEV",
-      description:
-        "Developed and deployed full-stack web applications using the PERN and MERN stacks. Implemented Test-Driven Development (TDD) practices, built scalable front-end solutions, optimized backend performance, and established CI/CD pipelines for seamless deployments.",
-    },
-    {
-      date: "JUN 2019 - JUL 2020",
-      title: "INDEPENDENT CONTRACTOR",
-      description:
-        "Designed and built an embedded system for tracking solar energy metrics, including energy input/output, temperature, humidity, and other environmental factors. Developed a cloud-based platform for real-time monitoring and data visualization.",
-    },
-    {
-      date: "AUG 2018 - JUN 2019",
-      title: "SOFTWARE ENGINEER - SOLARVILLAGE",
-      description:
-        "Developed and maintained the company website, implemented an IT inventory management system, and assisted in hardware installations. Led software solutions for stock tracking and automated reporting while providing IT support and mentoring interns.",
-    },
-  ];
+
   const Experience = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
       <div className="flex flex-col items-center w-[100%]">
-        {experiences.map((exp, index) => (
+        {meData[0].experiences.map((exp, index) => (
           <div
             key={index}
             className="flex flex-col items-start w-full mb-2"
@@ -504,37 +427,6 @@ export default function Home() {
             <div className="border-l-2 border-white pl-4 pt-2 mb-2">
               <h3 className="font-bold text-lg mb-2">{exp.title}</h3>
               <p className="text-md mb-4">{exp.description}</p>
-
-              {/* {hoveredIndex === index && (
-                <div
-                  className="transition-all duration-300 opacity-100 scale-100"
-                  style={{ transform: "scale(1)" }}
-                >
-                  <div className="flex gap-2 w-full mb-4">
-                    <img
-                      className="w-1/2"
-                      src="https://placehold.co/600x400/EEE/31343C"
-                      alt="Preview 1"
-                    />
-                    <img
-                      className="w-1/2"
-                      src="https://placehold.co/600x400/EEE/31343C"
-                      alt="Preview 2"
-                    />
-                  </div>
-                  <ul>
-                    <li className="text-md">Automated pipelines</li>
-                    <li className="text-md">Optimized workflows</li>
-                  </ul>
-                </div>
-              )}
-
-              {hoveredIndex !== index && (
-                <div
-                  className="transition-all duration-300 opacity-0 scale-95"
-                  style={{ transform: "scale(0.95)" }}
-                />
-              )} */}
             </div>
           </div>
         ))}
@@ -542,108 +434,7 @@ export default function Home() {
     );
   };
 
-  const renderTitle = () => {
-    switch (activeSection) {
-      case "about":
-        return "ABOUT";
-      case "projects":
-        return "PROJECTS";
-      case "experience":
-        return "EXPERIENCE";
-      case "other":
-        return "OTHER";
-      case "contact":
-        return "CONTACT";
-      default:
-        return null;
-    }
-  };
-
-  const handleInteraction = () => {
-    console.log("Video Interaction", videoSrc);
-
-    // Trigger the video change with a delay for smooth fade
-    setIsVideoChanging(true);
-    setTimeout(() => {
-      // change this to intro later
-      setVideoSrc("/videos/surafel-interaction.mp4");
-    }, 300); // Delay for the fade-out effect
-    setIsVideoChanging(false);
-  };
-
-  const handleMouseScroll = () => {
-    console.log("Scroll Interaction", videoSrc);
-
-    // Trigger the video change with a delay for smooth fade
-    setIsVideoChanging(true);
-    setTimeout(() => {
-      // change this to intro later
-      setVideoSrc("/videos/surafel-interaction.mp4");
-    }, 300); // Delay for the fade-out effect
-    setIsVideoChanging(false);
-  };
-
-  const autoScrollAbout = () => {
-    console.log("Autoscrolling");
-    const aboutContent = document.getElementById("aboutContent");
-    if (aboutContent && aboutContent.scrollTop !== aboutContent.scrollHeight) {
-      const targetScrollTop = aboutContent.scrollHeight;
-      const currentScrollTop = aboutContent.scrollTop;
-      const scrollDistance = targetScrollTop - currentScrollTop;
-
-      // Set the scroll speed factor (larger values = slower scroll)
-      const speed = 5000;
-
-      const smoothScroll = () => {
-        if (Math.abs(targetScrollTop - aboutContent.scrollTop) > 1) {
-          aboutContent.scrollTop += scrollDistance / speed;
-          requestAnimationFrame(smoothScroll);
-        } else {
-          aboutContent.scrollTop = targetScrollTop; // Ensure it reaches the exact position
-        }
-      };
-
-      smoothScroll();
-    }
-  };
-
-  useEffect(() => {
-    if (activeSection == "start") {
-      // Listen for user interaction
-      window.addEventListener("mousemove", handleInteraction);
-      window.addEventListener("mousedown", handleInteraction);
-      window.addEventListener("touchstart", handleInteraction);
-
-      // Clean up event listeners
-      return () => {
-        window.removeEventListener("mousemove", handleInteraction);
-        window.removeEventListener("mousedown", handleInteraction);
-        window.removeEventListener("touchstart", handleInteraction);
-      };
-    }
-
-    if (activeSection === "about") {
-      // Listen for mouse scroll in the about section
-      // Trigger auto-scroll in the about section
-      // if (!isUserScrolling) {
-      autoScrollAbout();
-      // }
-      window.addEventListener("scroll", handleMouseScroll);
-
-      // Set the initial video when switching to about section
-      setIsVideoChanging(true);
-      setTimeout(() => {
-        // change this to intro later
-        setVideoSrc("/videos/surafel-interaction.mp4");
-      }, 300); // Delay for the fade-out effect
-      setIsVideoChanging(false);
-
-      // Clean up scroll event listener
-      return () => {
-        window.removeEventListener("scroll", handleMouseScroll);
-      };
-    }
-  }, [activeSection, isUserScrolling, videoSrc, setVideoSrc]);
+  const renderTitle = () => meData[0].sectionTitles[activeSection] || null;
 
   const renderContent = () => {
     switch (activeSection) {
@@ -665,13 +456,17 @@ export default function Home() {
             <div className="h-full overflow-hidden " id="aboutContent">
               <>
                 <div className="flex flex-wrap gap-1 space-around">
-                  {projects.map((project, index) => (
+                  {meData[0].projects.map((project, index) => (
                     <div
+                      onClick={() => {
+                        setActiveSection("project-details");
+                        setSelectedProjects(project);
+                      }}
                       key={index}
                       className="project-card w-full md:w-[45%] lg:w-[48%] p-4 rounded-sm border-2 border-transparent"
                     >
                       <img
-                        className="mb-4 w-full"
+                        className="mb-4 w-full flicker"
                         src={project.image}
                         alt={project.title}
                       />
@@ -679,13 +474,12 @@ export default function Home() {
                         {project.title}
                       </h4>
                       <h4 className="mb-1 text-center">{project.subtitle}</h4>
-                      {/* <div className="px-4 mb-3 flex justify-between">
+                      <div className="px-4 mb-3 flex justify-between">
                         {project?.tags.map(({ label, section, video }) => (
                           <button
                             key={section}
                             onClick={() => {
                               setActiveSection(section);
-                              if (video) setVideoSrc(video);
                             }}
                             className="text-sm text-left font-mono relative group transition-all flicker"
                             style={{ fontFamily: "VCRMono" }}
@@ -702,12 +496,12 @@ export default function Home() {
                         {project.techIcons.map((icon, i) => (
                           <img
                             key={i}
-                            className="h-[30px] mb-2"
+                            className="h-[30px] mb-2 flicker"
                             src={icon}
                             alt="Tech Icon"
                           />
                         ))}
-                      </div> */}
+                      </div>
 
                       <p
                         className="mb-4 text-center"
@@ -715,12 +509,61 @@ export default function Home() {
                           __html: project.description,
                         }}
                       />
+                      {/* <div className="px-4 mb-4 flex gap-2 justify-center">
+                        {project.actions.map(({ label, section, video }) => (
+                          <button
+                            key={section}
+                            className="text-sm text-left font-mono relative group transition-all flicker border-2 px-2 py-1"
+                            style={{ fontFamily: "VCRMono" }}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div> */}
                     </div>
                   ))}
                 </div>
               </>
             </div>
           </div>
+        );
+      case "project-details":
+        if (!selectedProject) {
+          setActiveSection("projects");
+        }
+        return (
+          <>
+            <div
+              className="h-full w-full overflow-hidden overflow-y-auto no-scrollbar"
+              style={{ fontFamily: "VCRNeue" }}
+            >
+              <div className="mt-2">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full mb-4"
+                />
+                <h3 className="text-3xl font-semibold mt-4">WHAT IS IT?</h3>
+                {selectedProject.longDescription?.map((desc, index) => (
+                  <div key={index} className="mb-4">
+                    <p className="text-lg mb-4">{desc.firstParagraph}</p>
+                    <p className="text-lg">{desc.secondParagraph}</p>
+                  </div>
+                ))}
+                <h3 className="text-3xl font-semibold mt-4">WHAT I DID?</h3>
+                <ul className="list-disc pl-6">
+                  {selectedProject.whatIDid?.map((item, index) => (
+                    <li key={index} className="text-lg mb-2">
+                      <span className="capitalize font-bold">
+                        {item.title}:
+                      </span>{" "}
+                      {item.description}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </>
         );
       case "experience":
         return (
@@ -735,18 +578,11 @@ export default function Home() {
               when i'm not coding i'm;
             </p>
             <div className="flex flex-col gap-4">
-              {[
-                {
-                  label: "learning to play guitar.",
-                  video: "/videos/surafel-guitar.mp4",
-                },
-                { label: "taking care of my cat.",   video: "/videos/surafel-cat.mp4", },
-                { label: "reading a book.",   video: "/videos/surafel-book.mp4", },
-              ].map(({ label, section, video }) => (
+              {meData[0].otherItems.map(({ label, videoIndex }) => (
                 <button
-                  key={section}
-                  onMouseEnter={() => setVideoSrc(video)}
-                  onMouseLeave={() => setVideoSrc("videos/surafel-interaction.mp4")}
+                  key={videoIndex}
+                  onMouseEnter={() => setActiveVideoIndex(videoIndex)}
+                  onMouseLeave={() => setActiveVideoIndex(0)}
                   data-text={label}
                   className="px-5 text-3xl text-left font-mono relative group transition-all flicker hover:glitch"
                   style={{
@@ -780,7 +616,6 @@ export default function Home() {
     >
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black z-[1000]">
-          {/* Play Button */}
           {showPlayButton && (
             <button
               onClick={() => {
@@ -798,7 +633,6 @@ export default function Home() {
             </button>
           )}
 
-          {/* Video (Initially Paused) */}
           <video
             ref={videoRef}
             className="w-full h-full object-cover"
@@ -810,26 +644,28 @@ export default function Home() {
         </div>
       )}
 
-      <audio ref={audioRef} loop>
-        <source src="/audio/lofi-1.mp3" type="audio/mp3" />
-      </audio>
+      {/* <audio ref={audioRef} loop>
+        <source src={currentSong.src} type="audio/mp3" />
+      </audio> */}
 
-      {/* Background Video */}
-      <video
-        key={videoSrc}
-        className={`absolute top-0 left-0 w-full h-full object-cover z-[10] transition-opacity duration-1000 ${
-          isVideoChanging ? "opacity-0" : "opacity-100"
-        }`}
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {meData[0].videoSources.map((src, index) => (
+        <video
+          key={src}
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            activeVideoIndex === index
+              ? "opacity-100 z-[10]"
+              : "opacity-0 z-[0]"
+          }`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={src} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      ))}
 
-      {/* Overlay Image */}
       <div
         className={`absolute top-0 left-0 w-full h-full z-[20] pointer-events-none ${
           loading && "z-[1000]"
@@ -856,177 +692,480 @@ export default function Home() {
         }}
       />
 
-      <div className="w-full hidden  lg:w-[40%] text-gray-900 lg:flex flex-col justify-center items-start p-6 sm:p-10 lg:p-12 xl:p-16 overflow-hidden">
-        {/* Content Goes Here */}
-      </div>
+      <div className="w-full hidden  lg:w-[40%] text-gray-900 lg:flex flex-col justify-center items-start p-6 sm:p-10 lg:p-12 xl:p-16 overflow-hidden"></div>
 
-      {activeSection == "start" ? (
-        <div className="relative w-full lg:w-[60%] text-white flex flex-col justify-center items-start p-6 sm:p-12 md:p-16 lg:p-20 xl:p-24 z-[100]">
-          <p
-            className="text-2xl lg:text-4xl mb-2 glitch flicker"
-            style={{ fontFamily: "VCRMono" }}
-            data-text="Hi, I'm"
-          >
-            Hi, I'm
-          </p>
-          <h1
-            onClick={() => setVideoSrc("/videos/surafel-introoduction.mp4")}
-            className="text-5xl lg:text-8xl font-bold mb-1 glitch flicker"
-            style={{ fontFamily: "VCRNeue" }}
-            data-text="SURAFEL YIMAM"
-          >
-            SURAFEL YIMAM
-          </h1>
-          <p
-            className="text-2xl lg:text-4xl mb-10 glitch flicker"
-            style={{ fontFamily: "VCRMono" }}
-            data-text="FULL STACK SOFTWARE ENGINEER"
-          >
-            FULL STACK SOFTWARE ENGINEER
-          </p>
-          <nav className="flex flex-col gap-2 pl-5">
-            {[
-              {
-                label: "ABOUT",
-                section: "about",
-                video: "/videos/surafel-interaction.mp4",
-              },
-              { label: "PROJECTS", section: "projects" },
-              { label: "EXPERIENCE", section: "experience" },
-              { label: "OTHER", section: "other" },
-              { label: "CONTACT", section: "contact" },
-            ].map(({ label, section, video }) => (
-              <button
-                key={section}
-                onClick={() => {
-                  setActiveSection(section);
-                  if (video) setVideoSrc(video);
-                }}
-                className="text-2xl text-left font-mono relative group transition-all flicker"
-                style={{
-                  fontFamily: "VCRMono",
-                }}
-              >
-                <span className="absolute left-[-1.5rem] opacity-0 transition-opacity group-hover:opacity-100">
-                  &gt;
-                </span>
-                {label}
-              </button>
-            ))}
-          </nav>
-          <div className="absolute bottom-10 right-20">
-            <div className="flex items-center justify-center gap-8">
-              <svg
-                className="cursor-pointer flicker pt-2"
-                height="45px"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                viewBox="-5.0 -10.0 110.0 135.0"
-                onClick={toggleMusic}
-              >
-                {/* If song is playing, show SVG, if stopped show an "X" */}
-                {isPlaying ? (
-                  <path
-                    fill="#FFF"
-                    d="m38.332 74.5h-10.832v8.832h-27.5v-19.164h10.109v-7.4453h16.281v-40.055h73.609v14.832h-16.277v43h-9.4453v8.832h-27.5v-19.164h10.113v-7.4453h14.887v-25.223h-33.445z"
-                  />
-                ) : (
-                  // Show an X when the song is paused
-                  <path
-                    fill="#FFF"
-                    d="M60 35l-25 25m0-25l25 25"
-                    stroke="#FFF"
-                    strokeWidth="6"
-                  />
-                )}
-              </svg>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="relative w-full lg:w-[60%] text-white flex flex-col justify-center items-start p-6 sm:p-12 md:p-16 lg:p-20 xl:p-24 z-[100]">
-          <nav className="w-full flex items-center justify-between mb-10 px-2">
-            {/* Logo */}
-            <h1
-              onClick={() => setActiveSection("start")}
-              data-text={"SRFL"}
-              className="text-3xl font-bold glitch flicker cursor-pointer"
-              style={{ fontFamily: "VCRNeue" }}
+      <div className="relative w-full lg:w-[60%] text-white flex flex-col justify-center items-start p-6 sm:p-12 md:p-16 lg:p-20 xl:p-24 z-[100]">
+        {activeSection == "start" ? (
+          <>
+            <p
+              className="text-2xl lg:text-4xl mb-2 glitch flicker"
+              style={{ fontFamily: "VCRMono" }}
+              data-text="Hi, I'm"
             >
-              SRFL
+              Hi, I'm
+            </p>
+            <h1
+              className="text-5xl lg:text-8xl font-bold mb-1 glitch flicker"
+              style={{ fontFamily: "VCRNeue" }}
+              data-text="SURAFEL YIMAM"
+            >
+              SURAFEL YIMAM
             </h1>
-
-            {/* Desktop Menu */}
-            <div className="hidden md:flex gap-6 xl:gap-10 items-center">
-              {menuItems.map(({ label, section, video }) => (
+            <p
+              className="text-2xl lg:text-4xl mb-10 glitch flicker"
+              style={{ fontFamily: "VCRMono" }}
+              data-text="FULL STACK SOFTWARE ENGINEER"
+            >
+              FULL STACK SOFTWARE ENGINEER
+            </p>
+            <nav className="flex flex-col gap-2 pl-5">
+              {meData[0].menuItems.map(({ label, section, video }) => (
                 <button
                   key={section}
                   onClick={() => {
                     setActiveSection(section);
-                    if (video) setVideoSrc(video);
                   }}
-                  className="text-md font-mono relative group transition-all flicker"
-                  style={{ fontFamily: "VCRMono" }}
+                  className="text-2xl text-left font-mono relative group transition-all flicker"
+                  style={{
+                    fontFamily: "VCRMono",
+                  }}
                 >
-                  <span className="absolute left-[-1rem] opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="absolute left-[-1.5rem] opacity-0 transition-opacity group-hover:opacity-100">
                     &gt;
                   </span>
                   {label}
                 </button>
               ))}
-            </div>
+            </nav>
+          </>
+        ) : (
+          <>
+            <nav className="w-full flex items-center justify-between mb-4 px-2">
+              <h1
+                onClick={() => setActiveSection("start")}
+                data-text={"SRFL"}
+                className="text-3xl font-bold glitch flicker cursor-pointer"
+                style={{ fontFamily: "VCRNeue" }}
+              >
+                SRFL
+              </h1>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              style={{ fontFamily: "VCRMono" }}
-            >
-              {isMenuOpen ? "X" : "O"}
-            </button>
-
-            {/* Mobile Dropdown Menu */}
-            {isMenuOpen && (
-              <div className="absolute top-16 right-6 bg-black text-white  flex flex-col w-48 p-4 md:hidden z-[1000]">
-                {menuItems.map(({ label, section, video }) => (
+              <div className="hidden md:flex gap-6 xl:gap-10 items-center">
+                {meData[0].menuItems.map(({ label, section, video }) => (
                   <button
+                    key={section}
                     onClick={() => {
                       setActiveSection(section);
-                      setIsMenuOpen(!isMenuOpen);
                     }}
-                    key={section}
-                    className="pl-4 mb-1 text-md text-left font-mono relative group transition-all flicker"
-                    style={{
-                      fontFamily: "VCRMono",
-                    }}
+                    className="text-md font-mono relative group transition-all flicker"
+                    style={{ fontFamily: "VCRMono" }}
                   >
-                    <span className="absolute left-[-.5rem] opacity-0 transition-opacity group-hover:opacity-100">
+                    <span className="absolute left-[-1rem] opacity-0 transition-opacity group-hover:opacity-100">
                       &gt;
                     </span>
                     {label}
                   </button>
                 ))}
               </div>
-            )}
-          </nav>
-          <div>
-            <h1
-              className="text-6xl lg:text-8xl font-bold mb-8 text-upper flicker glitch"
-              data-text={renderTitle()}
-              style={{ fontFamily: "VCRMono" }}
+
+              <button
+                className="md:hidden text-white"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                style={{ fontFamily: "VCRMono" }}
+              >
+                {isMenuOpen ? (
+                  <svg
+                    height="40px"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    {" "}
+                    <path
+                      d="M5 5h2v2H5V5zm4 4H7V7h2v2zm2 2H9V9h2v2zm2 0h-2v2H9v2H7v2H5v2h2v-2h2v-2h2v-2h2v2h2v2h2v2h2v-2h-2v-2h-2v-2h-2v-2zm2-2v2h-2V9h2zm2-2v2h-2V7h2zm0 0V5h2v2h-2z"
+                      fill="#FFF"
+                    />{" "}
+                  </svg>
+                ) : (
+                  <svg
+                    height="40px"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    {" "}
+                    <path
+                      d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm16 5H4v2h16v-2z"
+                      fill="#FFF"
+                    />{" "}
+                  </svg>
+                )}
+              </button>
+
+              {isMenuOpen && (
+                <div className="absolute top-16 right-6 bg-black text-white  flex flex-col w-48 p-4 md:hidden z-[1000]">
+                  {meData[0].menuItems.map(({ label, section, video }) => (
+                    <button
+                      onClick={() => {
+                        setActiveSection(section);
+                        setIsMenuOpen(!isMenuOpen);
+                      }}
+                      key={section}
+                      className="pl-4 mb-1 text-md text-left font-mono relative group transition-all flicker"
+                      style={{
+                        fontFamily: "VCRMono",
+                      }}
+                    >
+                      <span className="absolute left-[-.5rem] opacity-0 transition-opacity group-hover:opacity-100">
+                        &gt;
+                      </span>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </nav>
+            <div className=" w-full mb-3 items-center py-1 ">
+              <h1
+                className="text-6xl lg:text-8xl font-bold text-upper flicker glitch"
+                data-text={renderTitle()}
+                style={{ fontFamily: "VCRMono" }}
+              >
+                {renderTitle()}
+              </h1>
+              {activeSection == "project-details" && selectedProject && (
+                <div className="w-full">
+                  <button
+                    className="mb-4 p-2 border border-white"
+                    onClick={() => setActiveSection("projects")}
+                    style={{ fontFamily: "VCRMono" }}
+                  >
+                    ← BACK TO PROJECTS
+                  </button>
+                  <h2
+                    className="text-4xl font-bold"
+                    style={{ fontFamily: "VCRMono" }}
+                  >
+                    {selectedProject.title}
+                  </h2>
+                  <h4
+                    className="text-xl font-semibold mb-2"
+                    style={{ fontFamily: "VCRMono" }}
+                  >
+                    {selectedProject.subtitle}
+                  </h4>
+                  <div className="flex w-full justify-between gap-4 mb-2">
+                    <div className="flex gap-4 ">
+                      {selectedProject.techIcons.map((icon, i) => (
+                        <img
+                          key={i}
+                          className="h-[30px] mb-2 flicker"
+                          src={icon}
+                          alt="Tech Icon"
+                        />
+                      ))}
+                    </div>
+                    {/* <div className="px-4 mb-4 flex gap-2 justify-center">
+                      {selectedProject.actions.map(
+                        ({ label, section, video }) => (
+                          <a
+                            // href={}
+                            key={section}
+                            className="text-sm text-left font-mono relative group transition-all flicker border-2 px-2 py-1"
+                            style={{ fontFamily: "VCRMono" }}
+                          >
+                            {label}
+                          </a>
+                        )
+                      )}
+                    </div> */}
+                  </div>
+                </div>
+              )}
+            </div>
+            <div
+              className="h-full w-full overflow-hidden overflow-y-auto no-scrollbar"
+              style={{ fontFamily: "VCRNeue" }}
+              id="aboutContent"
             >
-              {renderTitle()}
-            </h1>
-          </div>
-          <div
-            className="h-full w-full overflow-hidden overflow-y-auto no-scrollbar"
-            style={{ fontFamily: "VCRNeue" }}
-            id="aboutContent"
-          >
-            {renderContent()}
+              {renderContent()}
+            </div>
+          </>
+        )}
+        <div className="absolute bottom-10  shadow-lg w-[90%] px-8 ">
+          <div className="flex items-end justify-between gap-8">
+            <div className={`flex-start   `}>
+              <div
+                className="capitalize text-xs"
+                style={{
+                  fontFamily: "VCRMono",
+                }}
+              >
+                WELCOME
+              </div>
+              <div
+                className="capitalize text-2xl"
+                style={{
+                  fontFamily: "VCRMono",
+                }}
+              >
+                #
+                {visitorCount > 0
+                  ? String(visitorCount).padStart(3, "0")
+                  : "000"}
+              </div>
+            </div>
+            <div
+              style={{
+                background: "rgba(0, 0, 0, 0.8)",
+              }}
+              className={`relative max-w-[250px] p-3  border border-white text-white flicker ${
+                !isAudioPlayerOpen ? "hidden" : "visible"
+              }`}
+            >
+              <div
+                className="absolute left-1 top-2 cursor-pointer"
+                onClick={() => setIsAudioPlayerOpen(false)}
+              >
+                <svg
+                  height="20px"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  {" "}
+                  <path
+                    d="M5 3H3v18h18V3H5zm14 2v14H5V5h14zm-8 4H9V7H7v2h2v2h2v2H9v2H7v2h2v-2h2v-2h2v2h2v2h2v-2h-2v-2h-2v-2h2V9h2V7h-2v2h-2v2h-2V9z"
+                    fill="#FFF"
+                  />
+                </svg>
+              </div>
+              <div className="flex gap-4 items-center ml-4  pl-8 w-[200px] overflow-hidden">
+                <div className="relative w-full">
+                  <h2
+                    style={{ fontFamily: "VCRMono" }}
+                    key={animationKey}
+                    className="text-md font-bold marquee-wrapper"
+                  >
+                    <span className="marquee-text">
+                      {currentSong.title || ""}
+                    </span>
+                  </h2>
+                  <p
+                    style={{ fontFamily: "VCRMono" }}
+                    className="text-xs text-white"
+                  >
+                    <span className="">{currentSong.seller || ""}</span>
+                  </p>
+                </div>
+              </div>
+
+              <audio
+                key={currentSong.src}
+                ref={audioRef}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleTimeUpdate}
+                style={{
+                  fontFamily: "VCRMono",
+                }}
+              >
+                <source src={currentSong.src} type="audio/mpeg" />
+              </audio>
+              <input
+                type="range"
+                className="w-full seek-slider"
+                min="0"
+                max={duration || 0}
+                value={progress}
+                onChange={handleProgressChange}
+              />
+              <div className="flex justify-between text-xs text-gray-400 mt-1">
+                <span
+                  style={{
+                    fontFamily: "VCRMono",
+                  }}
+                >
+                  {Math.floor(progress)}s
+                </span>
+                <span
+                  style={{
+                    fontFamily: "VCRMono",
+                  }}
+                >
+                  {Math.floor(duration)}s
+                </span>
+              </div>
+              <div className="flex items-center justify-center space-x-4 mt-1">
+                <button onClick={handlePrevious} className="">
+                  <svg
+                    height={"25px"}
+                    fill="#FFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    {" "}
+                    <path
+                      d="M6 4h2v16H6V4zm12 0h-2v2h-2v3h-2v2h-2v2h2v3h2v2h2v2h2V4z"
+                      fill="#FFF"
+                    />{" "}
+                  </svg>
+                </button>
+                <button onClick={togglePlay} className="">
+                  {!isPlaying ? (
+                    <svg
+                      height={"25px"}
+                      fill="#FFF"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      {" "}
+                      <path
+                        d="M10 20H8V4h2v2h2v3h2v2h2v2h-2v2h-2v3h-2v2z"
+                        fill="#FFF"
+                      />{" "}
+                    </svg>
+                  ) : (
+                    <svg
+                      height={"25px"}
+                      fill="#FFF"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      {" "}
+                      <path
+                        d="M10 4H5v16h5V4zm9 0h-5v16h5V4z"
+                        fill="#FFF"
+                      />{" "}
+                    </svg>
+                  )}
+                </button>
+                <button onClick={handleNext} className="">
+                  <svg
+                    height={"25px"}
+                    fill="#FFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    {" "}
+                    <path
+                      d="M6 4h2v2h2v2h2v2h2v4h-2v2h-2v2H8v2H6V4zm12 0h-2v16h2V4z"
+                      fill="#FFF"
+                    />{" "}
+                  </svg>
+                </button>
+                <button
+                  onClick={handleRepeatToggle}
+                  style={{
+                    opacity: isRepeat ? 1 : 0.5,
+                    transition: "opacity 0.3s",
+                  }}
+                >
+                  <svg
+                    height="25px"
+                    fill="#FFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M11 1H9v2h2v2H5v2H3v10h2v2h2v-2H5V7h6v2H9v2h2V9h2V7h2V5h-2V3h-2V1zm8 4h-2v2h2v10h-6v-2h2v-2h-2v2h-2v2H9v2h2v2h2v2h2v-2h-2v-2h6v-2h2V7h-2V5z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  onClick={handleShuffleToggle}
+                  style={{
+                    opacity: isShuffle ? 1 : 0.5,
+                    transition: "opacity 0.3s",
+                  }}
+                >
+                  <svg
+                    height="25px"
+                    fill="#FFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18 5h-2v2h2v2h-6v2h-2v6H2v2h8v-2h2v-6h6v2h-2v2h2v-2h2v-2h2V9h-2V7h-2V5zM2 9h6v2H2V9zm20 10v-2h-8v2h8z"
+                      fill="#FFF"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <audio
+                crossOrigin="anonymous"
+                loop
+                src="https://mysaqemvwxduynavbong.supabase.co/storage/v1/object/public/test/Ek%20Pal%20Ka%20Jeena.mp3"
+              ></audio>
+              <div className="flex items-center mt-2">
+                {volume > 0 ? (
+                  <svg
+                    height={"25px"}
+                    fill="#FFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    {" "}
+                    <path
+                      d="M11 2H9v2H7v2H5v2H1v8h4v2h2v2h2v2h2V2zM7 18v-2H5v-2H3v-4h2V8h2V6h2v12H7zm6-8h2v4h-2v-4zm8-6h-2V2h-6v2h6v2h2v12h-2v2h-6v2h6v-2h2v-2h2V6h-2V4zm-2 4h-2V6h-4v2h4v8h-4v2h4v-2h2V8z"
+                      fill="currentColor"
+                    />{" "}
+                  </svg>
+                ) : (
+                  <svg
+                    height={"25px"}
+                    fill="#FFF"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    {" "}
+                    <path
+                      d="M15 2h2v20h-2v-2h-2v-2h2V6h-2V4h2V2zm-4 6V6h2v2h-2zm-2 2h2V8H7v8h4v2h2v-2h-2v-2H9v-4z"
+                      fill="#FFF"
+                    />{" "}
+                  </svg>
+                )}
+                <input
+                  type="range"
+                  className="slider ml-2 w-full"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value={volume}
+                  onChange={handleVolumeChange}
+                />
+              </div>
+            </div>
+
+            <div
+              className={`flex gap-2 items-center ${
+                isAudioPlayerOpen ? "hidden" : "visible"
+              }`}
+            >
+              <div
+                key={currentSongIndex}
+                className="container"
+                id="container"
+                ref={visualizerRef}
+              ></div>
+              <svg
+                className="cursor-pointer flicker pt-2"
+                height="45px"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                viewBox="-5.0 -10.0 110.0 135.0"
+                onClick={() => setIsAudioPlayerOpen(true)}
+              >
+                <path
+                  fill="#FFF"
+                  d="m38.332 74.5h-10.832v8.832h-27.5v-19.164h10.109v-7.4453h16.281v-40.055h73.609v14.832h-16.277v43h-9.4453v8.832h-27.5v-19.164h10.113v-7.4453h14.887v-25.223h-33.445z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
