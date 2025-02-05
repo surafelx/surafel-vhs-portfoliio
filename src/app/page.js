@@ -367,9 +367,9 @@ export default function Home() {
   useEffect(() => {
     const hasVisited = sessionStorage.getItem("hasVisited");
 
-    if (hasVisited) {
-      setLoading(false); // Skip the video if user has visited before
-    }
+    // if (hasVisited) {
+    //   setLoading(false); // Skip the video if user has visited before
+    // }
 
     fetch("https://api.countapi.xyz/hit/surafel.work/visits")
       .then((res) => res.json())
@@ -401,7 +401,7 @@ export default function Home() {
       if (audioRef.current) {
         audioRef.current.play();
       }
-    }, 5000);
+    }, 4000);
 
     setTimeout(() => {
       setLoading(false);
@@ -622,7 +622,7 @@ export default function Home() {
     >
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black z-[1000]">
-          {!showPlayButton && (
+          {showPlayButton && (
             <button
               onClick={() => {
                 startVideo();
