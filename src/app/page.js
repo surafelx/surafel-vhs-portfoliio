@@ -899,13 +899,11 @@ export default function Home() {
           </>
         )}
         <div
-          className={`absolute bottom-[120px] lg:bottom-20  shadow-lg w-[80%] px-8 ${
-            activeSection != "start" && "bg-black"
-          } `}
+          className={`absolute bottom-[120px] lg:bottom-20  shadow-lg w-[80%] px-8  `}
         >
           <div className="flex items-center justify-between gap-8">
             <div className={`flex-start   `}>
-              <div
+              {/* <div
                 className="capitalize text-xs"
                 style={{
                   lineHeight: "100%",
@@ -925,7 +923,7 @@ export default function Home() {
                 {visitorCount > 0
                   ? String(visitorCount).padStart(3, "0")
                   : "000"}
-              </div>
+              </div> */}
             </div>
             <div
               style={{
